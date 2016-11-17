@@ -1,0 +1,129 @@
+.body {
+  background: hsla(0, 0%, 85%, .25)
+}
+
+h5 {
+  color: hsl(0, 0, 30%);  
+  font-family: Shrikhand;
+  text-transform: uppercase;
+  margin-bottom: none;
+}
+h5 small {
+  font-family: Playfair;
+  font-size: .95em;
+  text-transform: none;
+  margin-top: none;
+}
+.navigation {
+  background-color: hsla(0, 0%, 0%, .25)
+
+}
+.brand-logo {
+  padding: 10px 30px;
+}
+
+li a {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.main-nav li a:hover, .main-nav li a:active {
+  background-color: transparent;
+}
+
+.main-nav li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 18px;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.main-nav li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.home-header {
+  background: url("../images/background.jpg") no-repeat center right;
+  background-size: cover;
+  min-height: 60vh;
+}
+
+@media (min-width: 500px) {
+  .home-header {
+    min-height: 100vh;
+  }
+} 
+
+.headline {
+  padding-top: 50vh;
+  text-align: center;
+  font-family: "Shrikhand";
+  color: #00A99D;
+  text-shadow: 2px 2px hsla(0, 0, 0% .5);
+  overflow: hidden;
+}
+.headline h2 {
+  margin-bottom: 0;
+}
+.content {
+  overflow: hidden;
+  height: 49px;  
+}
+.subcaption {
+  line-height: 49px;
+  font-size: 45px;
+  font-family: "Shrikhand";
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  animation-name: change;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;  
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.image {
+  border: 1px solid hsl(0, 0%, 80%);
+}
+footer.page-footer {
+  background: hsla(0, 0%, 0%, .25);
+  margin: 0;
+}
+
+@keyframes change {
+  0%, 12%, 100% {transform:translateY(0);}
+  17%,29% {transform:translateY(-25%);}
+  34%,46% {transform:translateY(-50%);}
+  51%,63% {transform:translateY(-75%);}
+  68%,80% {transform:translateY(-50%);}
+  85%,97% {transform:translateY(-25%);}
+}
+
+
+@media (min-width: 900px) {
+  .headline {
+    text-align: left;
+    padding: 10vw;
+  }
+  .subcaption {
+    color: hsl(0, 0%, 30%);
+    text-shadow: 2px 2px #fff;
+  }
+}
