@@ -8,6 +8,11 @@ angular.module("mainApp", ["ui.router", "ui.materialize"])
       templateUrl: "../views/home.html"
     })
     
+    .state("projects", {
+      url: "/projects",
+      templateUrl: "../views/projects.html"
+    })
+
     .state("bolu", {
       url: "/bolu",
       templateUrl: "../views/bolu.html"
